@@ -11,4 +11,18 @@ package tablebooking;
  */
 public class Staff {
     
+    //attributes
+    private string name;
+    
+    //constucter
+    public Staff(string nameIn)
+    {
+        name = nameIn;
+    }
+    
+    //getter
+    public string getName()
+    {
+        return name;
+    }
 }
