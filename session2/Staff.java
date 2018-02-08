@@ -12,16 +12,16 @@ package tablebooking;
 public class Staff {
     
     //attributes
-    private string name;
+    String name;
     
     //constucter
-    public Staff(string nameIn)
+    public Staff(String nameIn)
     {
         name = nameIn;
     }
     
     //getter
-    public string getName()
+    public String getName()
     {
         return name;
     }

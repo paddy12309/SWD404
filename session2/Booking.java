@@ -12,20 +12,20 @@ package tablebooking;
 public class Booking {
     
     //attributes
-    private string name;
+    private String name;
     private int numberOfGuests;
-    private boolean inOrOut;
+    private boolean in;
     
     //constucter with parameters
-    public Booking(string nameIn, int numberOrGuestsIn, boolean inOrOutIn )
+    public Booking(String nameIn, int numberOfGuestsIn, boolean inIn )
     {
         name = nameIn;
         numberOfGuests = numberOfGuestsIn;
-        inOrOut = inOrOutIn;
+        in = inIn;
     }
     
     //getter methods
-    public string getName()
+    public String getName()
     {
         return name;
     }
@@ -33,9 +33,9 @@ public class Booking {
     {
         return numberOfGuests;
     }
-    public boolean getInOrOut()
+    public boolean isIn()
     {
-        return inOrOut;
+        return in;
     }
     
 }
