@@ -13,25 +13,33 @@ public class Table {
     //attributes 
     private int number;
     private int numSeat;
-    private boolean inOrOut;
-    private Staff name;
+    private boolean in;
+    private Staff waiter;
     private Booking book;
     
     //constuctor
-    public Table(boolean inOrOutIn, int numSeatIn, int numberIn)
+    public Table(boolean inIn, int numSeatIn, int numberIn)
     {
         number = numberIn;
         numSeat = numSeatIn;
-        inOrOut = inOrOutIn;
+        in = inIn;
     }
     //methods
-    public void assignStaff()
+    public void assignStaff(Staff staffIn)
     {
-        name = Staff.name;
+        //name = getNameIn
+        waiter = staffIn;
     }
-    public boolean assignTable()
+    public boolean assignBooking(Booking bookingIn)
     {
-        return (numSeat >= numSeatIn)&&(inOrOut == inOrOutIn);
+        int numGuest = bookingIn.getNumberOfGuests();
+        if((numSeat >= numGuest)&&(in == bookingIn.isIn()))
+            book = bookingIn;
+            return true;
+        else
+        {
+            return false;
+        }
     }
     public void clearTable()
     {
